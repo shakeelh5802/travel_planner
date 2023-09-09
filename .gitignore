@@ -1,23 +1,37 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+.env
+.cache
+.vscode
+!.vscode/extensions.json
+
+# Ignore client and server dependencies and build output
+/client/node_modules/
+/server/node_modules/
+/client/build/
+/server/build/
+
+# Ignore root-level dependencies
+.npm
+/typings/
+/node_modules/
 /.pnp
 .pnp.js
 
 # testing
-/coverage
+/coverage/
 
-# production
-/build
 
-# misc
+# Miscellaneous
 .DS_Store
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# Logs .gitignore items
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
